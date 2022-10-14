@@ -3,22 +3,34 @@
 /*Importing Righteous font for project */
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
-
-body * {
-    font-family: 'Roboto';
-    font-style: normal;
-}
-
-.container {
+body {
+    background-color: #E5E5E5;
     display: flex;
     justify-content: center;
 }
 
-.container-cabecalho {
+body * {
+    font-family: 'Roboto';
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+.container {
     width: 414px;
+    
+    display: flex;
+    background-color: #EDEDED;
+    position: relative;
+}
+
+.container-cabecalho {
+    width: inherit;
     height: 92px;
     background: #CF2B2B;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    
+    position: absolute;
+    top:0px;
+
 }
 
 .container-cabecalho h1 {
@@ -31,6 +43,7 @@ body * {
     color: #FFFFFF;
     margin-left: 21px;
     margin-top: 5px;
+    
 }
 
 .container-cabecalho h2 {
@@ -39,4 +52,58 @@ body * {
     line-height: 21px;
     color: #FFFFFF;
     margin-left: 21px;
+}
+
+.conteudo {
+    margin-top: 92px;
+    width: 100%;
+    background-color: #EDEDED;
+    margin-bottom: 150px;
+    position: relative;
+}
+
+.conteudo h1 {
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 32px;
+    letter-spacing: 0.018em;
+    color: #333333;
+    margin-top: 31px;
+    margin-bottom: 17px;
+    margin-left:19px ;
+}
+
+.container-alimentos {
+    width: 100%;
+    height: 216px;
+    background-color: purple;
+    border-radius: 5px;
+    display: flex;
+    overflow: hidden;
+    padding-left: 19px;
+    
+   
+
+}
+
+.alimento {
+    min-width: 172px;
+    height: 216px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
+    border-radius: 9px;   
+    margin: 0px 8px;
+    
+}
+
+.rodape {
+    width: inherit;
+    height: 92px;
+    background: #CF2B2B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position:absolute;
+    bottom:0;
+    
 }
