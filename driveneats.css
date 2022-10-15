@@ -16,7 +16,8 @@ body * {
 }
 
 .container {
-    width: 414px;
+    max-width: 414px;
+    width:100%;
     display: flex;
     flex-direction: column;
     background-color: #e5e5e5;
@@ -24,10 +25,15 @@ body * {
 }
 
 .container-cabecalho {
-    width: 100%;
+    max-width: 414px;
+    width:100%;
     height: 92px;
     background: #CF2B2B;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    position:fixed;
+    top:0;
+    left: auto;
+    z-index: 1;
 
 }
 
@@ -54,6 +60,8 @@ body * {
 
 .conteudo {
     width: 100%;
+    padding-top: 92px;
+    padding-bottom: 108px;
 
 }
 
@@ -95,13 +103,18 @@ body * {
 }
 
 .rodape {
-    width: 100%;
+    max-width: 414px;
+    width:100%;
     height: 92px;
     background: #FFFFFF;
     margin-top: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
+    position:fixed;
+    bottom:0;
+    left: auto;
+    z-index: 1;
 
 }
 
