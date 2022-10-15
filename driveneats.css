@@ -4,7 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
 
 body {
-    background-color: #E5E5E5;
+    background-color: #CBCBCB;
     display: flex;
     justify-content: center;
 }
@@ -16,19 +16,19 @@ body * {
 }
 
 .container {
-    width: 414px;    
+    width: 414px;
     display: flex;
     flex-direction: column;
-    background-color: #EDEDED;
-    
+    background-color: #e5e5e5;
+
 }
 
 .container-cabecalho {
     width: 100%;
     height: 92px;
-    background: #CF2B2B;    
-    
-    top:0px;
+    background: #CF2B2B;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 .container-cabecalho h1 {
@@ -39,9 +39,9 @@ body * {
     line-height: 55px;
     letter-spacing: -0.012em;
     color: #FFFFFF;
-    margin-left: 21px;
+    margin-left: 19px;
     margin-top: 5px;
-    
+
 }
 
 .container-cabecalho h2 {
@@ -54,9 +54,7 @@ body * {
 
 .conteudo {
     width: 100%;
-    background-color: #EDEDED;
-    
-    
+
 }
 
 .conteudo h1 {
@@ -69,20 +67,20 @@ body * {
     color: #333333;
     margin-top: 31px;
     margin-bottom: 17px;
-    margin-left:19px ;
+    margin-left: 19px;
 }
 
 .container-alimentos {
     width: 100%;
     height: 216px;
-    background-color: purple;
+    background-color: #e5e5e5;
     border-radius: 5px;
     display: flex;
     overflow: hidden;
-    padding-left: 19px;
+    padding-left: 11px;
     overflow: scroll;
-    
-   
+
+
 
 }
 
@@ -91,14 +89,35 @@ body * {
     height: 216px;
     background-color: #FFFFFF;
     box-shadow: 0px 0px 10px -4px rgba(0, 0, 0, 0.25);
-    border-radius: 9px;   
+    border-radius: 9px;
     margin: 0px 8px;
-    
+
 }
 
 .rodape {
     width: 100%;
     height: 92px;
-    background: #CF2B2B;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);   
+    background: #FFFFFF;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.botao {
+    width: 364px;
+    height: 61px;
+    background: #CBCBCB;
+    border-radius: 50px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    text-align: center;
+    letter-spacing: 0.018em;
+    padding: 8px 70px;
+    border: none;
+
 }
