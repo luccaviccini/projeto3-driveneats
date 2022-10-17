@@ -94,9 +94,7 @@ body * {
     overflow: scroll;
 }
 
-.comida,
-.bebida,
-.sobremesa {
+.comida,.bebida,.sobremesa {
     min-width: 172px;
     height: 216px;
     background-color: #FFFFFF;
