@@ -81,7 +81,9 @@ body * {
     margin-left: 19px;
 }
 
-.container-sobremesa, .container-comida, .container-bebida {
+.container-sobremesa,
+.container-comida,
+.container-bebida {
     width: 100%;
     height: 216px;
     background-color: #e5e5e5;
@@ -92,7 +94,9 @@ body * {
     overflow: scroll;
 }
 
-.comida, .bebida, .sobremesa {
+.comida,
+.bebida,
+.sobremesa {
     min-width: 172px;
     height: 216px;
     background-color: #FFFFFF;
@@ -103,9 +107,7 @@ body * {
     display: flex;
     flex-direction: column;
     align-items: start;
-    position:relative;
-    
-    
+    position: relative;
 }
 
 .selecionado {
@@ -114,17 +116,19 @@ body * {
 }
 
 ion-icon {
-    height:18px;
-    width:18px;
+    height: 18px;
+    width: 18px;
     color: #32B72F;
     position: absolute;
     z-index: 1;
-    bottom:16px;
+    bottom: 16px;
     right: 13px;
-    
+    display: none;
 }
 
-.sobremesa h1, .comida h1, .bebida  h1 {
+.sobremesa h1,
+.comida h1,
+.bebida h1 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 700;
@@ -135,7 +139,9 @@ ion-icon {
     margin-bottom: 4px;
 }
 
-.sobremesa h2, .comida h2, .bebida h2 {
+.sobremesa h2,
+.comida h2,
+.bebida h2 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 300;
@@ -145,7 +151,9 @@ ion-icon {
     margin-bottom: 5px;
 }
 
-.sobremesa h3, .comida h3, .bebida  h3 {
+.sobremesa h3,
+.comida h3,
+.bebida h3 {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -186,6 +194,9 @@ ion-icon {
     padding: 8px 70px;
     border: none;
     color: white;
-    
+
 }
 
+.show {
+    display: block;
+}
