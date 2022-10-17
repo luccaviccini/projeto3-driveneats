@@ -6,7 +6,7 @@ let final_price;
 function selecionar(selecionado) {
   const nodes = selecionado.parentElement.getElementsByTagName("div");
   const botao_check = selecionado.querySelector("ion-icon");
-
+  
   for (let i = 0; i < nodes.length; i++) {
     nodes[i].classList.remove("selecionado");
     nodes[i].querySelector("ion-icon").classList.remove("show");
@@ -15,9 +15,6 @@ function selecionar(selecionado) {
   botao_check.classList.add("show");
   
   enable_botao(selecionado);
-  
-  
-   // 2 casas decimais
 }
 
 function alterarBotao() {
@@ -33,21 +30,21 @@ function enable_botao(selecionado) {
     comida_check = true;
     food_name = selecionado.querySelector("h1").innerHTML;
     food_price = editarPreco(selecionado.querySelector("h3").innerHTML);
-    console.log(food_name, food_price);
+    
   }
   // if drink is selected 
   if (selecionado.parentElement.classList.contains("container-bebida")) {
     bebida_check = true;
     drink_name = selecionado.querySelector("h1").innerHTML;
     drink_price = editarPreco(selecionado.querySelector("h3").innerHTML);
-    console.log(drink_name, drink_price);
+    
   }
   // if desert is selected
   if (selecionado.parentElement.classList.contains("container-sobremesa")) {
     sobremesa_check = true;
     desert_name = selecionado.querySelector("h1").innerHTML;
     desert_price = editarPreco(selecionado.querySelector("h3").innerHTML);
-    console.log(desert_name, desert_price)
+    
   }
 
   if (comida_check == true && bebida_check == true && sobremesa_check == true) {
