@@ -20,10 +20,11 @@
             <h1> Primeiro, seu prato</h1>
             <div class="container-comida">
                 <div onclick = "selecionar(this)" class="comida">  
-                    <img src="./imagens/frango.png" alt="frango">
+                    <img  id ='imagem-frango'src="./imagens/frango.png" alt="frango">
                     <h1>Frango Yin Yang</h1> 
                     <h2> Um pouco de batata, um pouco de salada</h2>      
-                    <h3> R$ 14,90</h3>   
+                    <h3> R$ 14,90</h3>
+                    <ion-icon class = 'checkmark'name="checkmark-circle"></ion-icon>   
                 </div>
                 <div  onclick = "selecionar(this)"class="comida">  
                     <img src="./imagens/frango.png" alt="frango">
@@ -83,13 +84,14 @@
             </div>           
         </div>
         <div class="rodape">
-            <button id="botao_confirma" onclick="alert(`Botao Apertado`)" class="botao" disabled="disabled"> Selecione os 3 itens
+            <button id="botao" onclick="alert('CLicou no botao') " class="botao" disabled="true" > Selecione os 3 itens
                 para fechar o pedido</button>
         </div>
         
     
     </div>
-
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="driveneats.js"> </script>
 </body>
 
