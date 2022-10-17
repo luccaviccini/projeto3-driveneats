@@ -1,7 +1,7 @@
 let comida_check, bebida_check, sobremesa_check = null;
 let food_name, drink_name, desert_name;
 let food_price, drink_price, desert_price;
-let final_price;
+let final_price,nome, endereco;
 
 function selecionar(selecionado) {
   const nodes = selecionado.parentElement.getElementsByTagName("div");
@@ -22,6 +22,7 @@ function alterarBotao() {
   botao.disabled = false;
   botao.textContent = "Fechar pedido";
   botao.style.backgroundColor = "#32B72F";
+  botao.style.cursor = "pointer";
 }
 
 function enable_botao(selecionado) {
@@ -61,11 +62,10 @@ function editarPreco(preco){
 function finalizarPedido(){
     final_price = (food_price+drink_price+desert_price).toFixed(2);
     final_price = String(final_price.replace(".", ","));
-    let message =  `Olá, gostaria de fazer o pedido: 
-                    - Prato: ${food_name}
-                    - Bebida: ${drink_name}
-                    - Sobremesa: ${desert_name}
-                    Total: R$ ${final_price}`
+    nome = prompt("Qual o seu nome?")
+    endereco = prompt("Qual o seu endereco?")
+
+    let message =  `Olá, gostaria de fazer o pedido:\n- Prato: ${food_name}\n- Bebida: ${drink_name}\n- Sobremesa: ${desert_name}\nTotal: R$ ${final_price}\n\n Nome: ${nome}\nEndereço: ${endereco}`
     message = encodeURI(message);
     window.open("https://wa.me/5532999375346?text=" + message);
 }
