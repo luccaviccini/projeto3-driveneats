@@ -1,6 +1,6 @@
 let comida_check, bebida_check, sobremesa_check = null;
-let food_name, drink_name, desert_name;
-let food_price, drink_price, desert_price;
+let food_name, drink_name, dessert_name;
+let food_price, drink_price, dessert_price;
 let final_price,nome, endereco;
 
 function selecionar(selecionado) {
@@ -40,11 +40,11 @@ function enable_botao(selecionado) {
     drink_price = editarPreco(selecionado.querySelector("h3").innerHTML);
     
   }
-  // if desert is selected
+  // if dessert is selected
   if (selecionado.parentElement.classList.contains("container-sobremesa")) {
     sobremesa_check = true;
-    desert_name = selecionado.querySelector("h1").innerHTML;
-    desert_price = editarPreco(selecionado.querySelector("h3").innerHTML);
+    dessert_name = selecionado.querySelector("h1").innerHTML;
+    dessert_price = editarPreco(selecionado.querySelector("h3").innerHTML);
     
   }
 
@@ -60,12 +60,50 @@ function editarPreco(preco){
 }
 
 function finalizarPedido(){
-    final_price = (food_price+drink_price+desert_price).toFixed(2);
-    final_price = String(final_price.replace(".", ","));
-    nome = prompt("Qual o seu nome?")
-    endereco = prompt("Qual o seu endereco?")
+    const cancela = document.querySelector(".sobrepoe");
+    cancela.classList.remove ("hidden");
 
-    let message =  `Olá, gostaria de fazer o pedido:\n- Prato: ${food_name}\n- Bebida: ${drink_name}\n- Sobremesa: ${desert_name}\nTotal: R$ ${final_price}\n\n Nome: ${nome}\nEndereço: ${endereco}`
-    message = encodeURI(message);
-    window.open("https://wa.me/5532999375346?text=" + message);
+    const nPrato = document.querySelector('.dish .nome');
+    console.log(nPrato);
+    nPrato.innerHTML = food_name;
+    const pPrato = document.querySelector('.dish .preco');
+    
+    pPrato.innerHTML = `R$ ${(food_price.toFixed(2)).replace(".", ",")}`;
+    const nDrink = document.querySelector('.drink .nome');
+    nDrink.innerHTML = drink_name;
+    const pDrink = document.querySelector('.drink .preco');
+    pDrink.innerHTML = `R$ ${(drink_price.toFixed(2)).replace(".", ",")}`;
+    const nDessert = document.querySelector('.dessert .nome');
+    nDessert.innerHTML = dessert_name;
+    const pDessert = document.querySelector('.dessert .preco');
+    pDessert.innerHTML = `R$ ${dessert_price.toFixed(2).replace(".", ",")}`;
+
+    const pTotal = document.querySelector('.total .preco-total');
+
+  
+    final_price = (food_price+drink_price+dessert_price).toFixed(2);
+    console.log(typeof food_price);
+    final_price = String(final_price.replace(".", ","));
+    pTotal.innerHTML = `R$ ${final_price}`;
+
+}
+
+function cancelar(){
+  const cancela = document.querySelector(".sobrepoe");
+  cancela.classList.add("hidden");
+}
+
+function confirmaPedido() {
+  nome = prompt("Qual o seu nome?")
+  endereco = prompt("Qual o seu endereco?")
+  if (nome == null){
+    nome = "";
+  }
+  if (endereco == null){
+    endereco = "";
+  }
+
+  let message =  `Olá, gostaria de fazer o pedido:\n- Prato: ${food_name}\n- Bebida: ${drink_name}\n- Sobremesa: ${dessert_name}\nTotal: R$ ${final_price}\n\nNome: ${nome}\nEndereço: ${endereco}`
+  message = encodeURI(message);
+  window.open("https://wa.me/5532999375346?text=" + message);
 }
